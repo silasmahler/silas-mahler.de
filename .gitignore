@@ -7,7 +7,9 @@
 
 # testing
 /coverage
+/dist
 /build
+/docs
 
 
 # misc

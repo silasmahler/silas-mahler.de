@@ -6,7 +6,7 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'build',
+    outDir: 'dist',
     sourcemap: process.env.NODE_ENV !== 'production',
     minify: 'esbuild', // Use esbuild instead of terser (faster and no extra dependency)
     rollupOptions: {
