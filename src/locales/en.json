@@ -1,16 +1,32 @@
 {
     "greeting": {
         "title": "Hi, I'm Silas Mahler",
-        "subtitle": "Senior Delivery Architect – Cloud & DevOps. I advise customers on architecture, security, and solution design for cloud-native AWS systems. I specialize in Infrastructure as Code (IaC) with Terraform and Packer, AWS cloud architecture, and DevOps automation. As a Certified Terraform Associate and AWS Certified professional, I optimize cloud infrastructures for scalability, security, and cost efficiency. With expertise in Java-based microservices, the Spring ecosystem, and CI/CD workflows, I ensure seamless integration and high-performance delivery. 🚀"
+        "subtitle": "AWS Cloud Architect & DevOps Expert. I architect and implement secure, scalable cloud infrastructures using Terraform and AWS best practices. Specialized in IaC automation, microservices architecture, and enterprise CI/CD pipelines. Certified in AWS and Terraform."
     },
     "skills": {
         "title": "What I do",
         "subtitle": "SENIOR ARCHITECT",
         "skill1": "⚡ Consulting, design, and implementation of AWS cloud infrastructures for software migrations",
         "skill2": "⚡ Infrastructure as Code (IaC) with Terraform, as well as DevOps build tools and workflows",
-        "skill3": "⚡ Expertise in cloud system architectures, Java-based microservices, and the Spring ecosystem and a focus on modular architectures"
+        "skill3": "⚡ Expertise in cloud system architectures, Java-based microservices, and the Spring ecosystem and a focus on modular architectures",
+        "categories": {
+            "cloudDevops": "Cloud & DevOps",
+            "programming": "Programming & Development",
+            "architecture": "Architecture & Design"
+        },
+        "search": "Search skills...",
+        "filter": {
+            "all": "All",
+            "beginner": "Beginner",
+            "intermediate": "Intermediate",
+            "advanced": "Advanced"
+        },
+        "expertise": "Core Expertise",
+        "noResults": "No skills found matching your criteria.",
+        "clearFilters": "Clear Filters"
     },
     "education": {
+        "subtitle": "My academic background and qualifications",
         "masterDesc": "Master of Science in Computer Science",
         "bachelorDesc": "Bachelor of Science in Computer Science"
     },
@@ -21,6 +37,12 @@
         "javaSpring": "Java / Spring"
     },
     "workExperience": {
+        "subtitle": "My professional journey and key achievements",
+        "expandAll": "Expand All",
+        "collapseAll": "Collapse All",
+        "showMore": "Show More",
+        "showLess": "Show Less",
+        "keyAchievements": "Key Achievements & Responsibilities",
         "capgemini": {
             "role": "Senior Delivery Architect",
             "desc": "Specializing in the specification and implementation of cloud-native solutions for software migrations and enterprise systems in AWS. Providing comprehensive consulting and advisory services.",
@@ -77,31 +99,52 @@
         }
     },
     "certifications": {
-        "title": "Certifications"
+        "title": "Certifications",
+        "subtitle": "Professional certifications and achievements",
+        "search": "Search certifications...",
+        "sortByDate": "Sort by Date",
+        "sortByName": "Sort by Name",
+        "noResults": "No certifications found matching your search.",
+        "clearSearch": "Clear Search",
+        "verified": "Verified",
+        "totalCertifications": "Total Certifications",
+        "yearsOfLearning": "Years of Learning",
+        "recentCertifications": "Recent (Last Year)"
     },
     "projects": {
         "title": "Projects",
+        "subtitle": "Explore my featured projects and open source contributions",
+        "search": "Search repositories...",
+        "loading": "Loading projects...",
+        "error": "Failed to load projects",
+        "noDescription": "No description available",
+        "noResults": "No repositories found matching your search.",
+        "clearSearch": "Clear Search",
         "bigProjects": {
             "title": "Big Projects",
             "subtitle": "Organizations I helped build or contribute to",
             "kreinn": {
                 "name": "KreInn GmbH",
                 "desc": "My own IT startup for service, development, and consulting services",
+                "tag": "IT Startup",
                 "link": "Visit Website"
             },
             "trackinn": {
                 "name": "TrackInn",
                 "desc": "Modern time tracking for efficient project management",
+                "tag": "Time Tracking",
                 "link": "Visit Website"
             },
             "dohack": {
                 "name": "DO!Hack",
                 "desc": "Our successful hackathon organization since 2015",
+                "tag": "Hackathon",
                 "linkYoutube": "Visit YouTube"
             },
             "deprecated": {
                 "name": "Already Deprecated Stream",
                 "desc": "A tech stream with some outstanding colleagues",
+                "tag": "Tech Stream",
                 "link": "Visit Website"
             }
         },
@@ -117,7 +160,27 @@
     },
     "contact": {
         "title": "Contact Me ☎️",
-        "subtitle": "If you want to discuss a project or exchange ideas about technologies, feel free to contact me!"
+        "subtitle": "If you want to discuss a project or exchange ideas about technologies, feel free to contact me!",
+        "form": {
+            "title": "Send me a message",
+            "name": "Your Name",
+            "namePlaceholder": "John Doe",
+            "email": "Your Email",
+            "emailPlaceholder": "john@example.com",
+            "subject": "Subject",
+            "subjectPlaceholder": "Project Inquiry",
+            "message": "Message",
+            "messagePlaceholder": "Tell me about your project...",
+            "send": "Send Message",
+            "sending": "Sending...",
+            "errors": {
+                "nameRequired": "Name is required",
+                "emailRequired": "Email is required",
+                "emailInvalid": "Email is invalid",
+                "subjectRequired": "Subject is required",
+                "messageRequired": "Message is required"
+            }
+        }
     },
     "footer": {
         "madeWith": "Made with",
@@ -126,6 +189,7 @@
     "navigation": {
         "skills": "Skills",
         "education": "Education",
+        "certifications": "Certifications",
         "experience": "Experience",
         "projects": "Projects",
         "contact": "Contact"
@@ -134,7 +198,8 @@
         "workExperience": "Work Experience",
         "education": "Education",
         "certifications": "Certifications",
-        "projects": "Projects"
+        "projects": "Projects",
+        "contact": "Contact Me"
     },
     "buttons": {
         "seeResume": "See My Resume",

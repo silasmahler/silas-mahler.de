@@ -1,16 +1,32 @@
 {
     "greeting": {
         "title": "Hallo, ich bin Silas Mahler",
-        "subtitle": "Senior Delivery Architect – Cloud & DevOps. Ich berate Kunden zu Architektur, Sicherheit und Lösungsdesign für cloud-native AWS-Systeme. Ich spezialisiere mich auf Infrastructure as Code (IaC) mit Terraform und Packer, AWS Cloud-Architektur und DevOps-Automatisierung. Als zertifizierter Terraform Associate und AWS Certified Professional optimiere ich Cloud-Infrastrukturen für Skalierbarkeit, Sicherheit und Kosteneffizienz. Mit Expertise in Java-basierten Microservices, dem Spring-Ökosystem und CI/CD-Workflows sorge ich für nahtlose Integration und leistungsstarke Bereitstellung. 🚀"
+        "subtitle": "AWS Cloud Architect & DevOps Experte. Ich entwerfe und implementiere sichere, skalierbare Cloud-Infrastrukturen mit Terraform und AWS Best Practices. Spezialisiert auf IaC-Automatisierung, Microservices-Architektur und Enterprise CI/CD Pipelines. Zertifiziert in AWS und Terraform."
     },
     "skills": {
         "title": "Was ich mache",
         "subtitle": "SENIOR ARCHITECT",
         "skill1": "⚡ Beratung, Design und Implementierung von AWS Cloud-Infrastrukturen für Software-Migrationen",
         "skill2": "⚡ Infrastructure as Code (IaC) mit Terraform sowie DevOps Build-Tools und Workflows",
-        "skill3": "⚡ Expertise in Cloud-Systemarchitekturen, Java-basierten Microservices und dem Spring-Ökosystem mit Fokus auf modulare Architekturen"
+        "skill3": "⚡ Expertise in Cloud-Systemarchitekturen, Java-basierten Microservices und dem Spring-Ökosystem mit Fokus auf modulare Architekturen",
+        "categories": {
+            "cloudDevops": "Cloud & DevOps",
+            "programming": "Programmierung & Entwicklung",
+            "architecture": "Architektur & Design"
+        },
+        "search": "Fähigkeiten suchen...",
+        "filter": {
+            "all": "Alle",
+            "beginner": "Anfänger",
+            "intermediate": "Fortgeschritten",
+            "advanced": "Experte"
+        },
+        "expertise": "Kernkompetenzen",
+        "noResults": "Keine Fähigkeiten gefunden, die Ihren Kriterien entsprechen.",
+        "clearFilters": "Filter löschen"
     },
     "education": {
+        "subtitle": "Mein akademischer Hintergrund und Qualifikationen",
         "masterDesc": "Master of Science in Informatik",
         "bachelorDesc": "Bachelor of Science in Informatik"
     },
@@ -21,6 +37,18 @@
         "javaSpring": "Java / Spring"
     },
     "workExperience": {
+        "subtitle": "Mein beruflicher Werdegang und wichtige Erfolge",
+        "expandAll": "Alle erweitern",
+        "collapseAll": "Alle einklappen",
+        "showMore": "Mehr anzeigen",
+        "showLess": "Weniger anzeigen",
+        "keyAchievements": "Wichtige Erfolge & Verantwortlichkeiten",
+        "subtitle": "Meine berufliche Laufbahn und wichtigste Erfolge",
+        "expandAll": "Alle erweitern",
+        "collapseAll": "Alle einklappen",
+        "showMore": "Mehr anzeigen",
+        "showLess": "Weniger anzeigen",
+        "keyAchievements": "Wichtigste Erfolge & Verantwortlichkeiten",
         "capgemini": {
             "role": "Senior Delivery Architect",
             "desc": "Spezialisiert auf die Spezifikation und Implementierung von cloud-nativen Lösungen für Software-Migrationen und Unternehmenssysteme in AWS. Umfassende Beratungs- und Advisory-Dienstleistungen.",
@@ -77,31 +105,59 @@
         }
     },
     "certifications": {
-        "title": "Zertifizierungen"
+        "title": "Zertifizierungen",
+        "subtitle": "Professionelle Zertifizierungen und Erfolge",
+        "search": "Zertifizierungen suchen...",
+        "sortByDate": "Nach Datum sortieren",
+        "sortByName": "Nach Name sortieren",
+        "noResults": "Keine Zertifizierungen gefunden, die Ihrer Suche entsprechen.",
+        "clearSearch": "Suche löschen",
+        "verified": "Verifiziert",
+        "totalCertifications": "Gesamtzahl Zertifizierungen",
+        "yearsOfLearning": "Jahre des Lernens",
+        "recentCertifications": "Aktuell (Letztes Jahr)"
     },
     "projects": {
         "title": "Projekte",
+        "subtitle": "Entdecke meine vorgestellten Projekte und Open-Source-Beiträge",
+        "search": "Repositories durchsuchen...",
+        "loading": "Projekte werden geladen...",
+        "error": "Fehler beim Laden der Projekte",
+        "noDescription": "Keine Beschreibung verfügbar",
+        "noResults": "Keine Repositories gefunden, die Ihrer Suche entsprechen.",
+        "clearSearch": "Suche löschen",
+        "subtitle": "Entdecke meine vorgestellten Projekte und Open-Source-Beiträge",
+        "search": "Repositories durchsuchen...",
+        "loading": "Projekte werden geladen...",
+        "error": "Fehler beim Laden der Projekte",
+        "noDescription": "Keine Beschreibung verfügbar",
+        "noResults": "Keine Repositories gefunden, die Ihrer Suche entsprechen.",
+        "clearSearch": "Suche löschen",
         "bigProjects": {
             "title": "Große Projekte",
             "subtitle": "Organisationen, die ich mitaufgebaut oder zu denen ich beigetragen habe",
             "kreinn": {
                 "name": "KreInn GmbH",
                 "desc": "Mein eigenes IT-Startup für Service-, Entwicklungs- und Beratungsdienstleistungen",
+                "tag": "IT Startup",
                 "link": "Webseite besuchen"
             },
             "trackinn": {
                 "name": "TrackInn",
                 "desc": "Moderne Zeiterfassung für effizientes Projektmanagement",
+                "tag": "Zeiterfassung",
                 "link": "Webseite besuchen"
             },
             "dohack": {
                 "name": "DO!Hack",
                 "desc": "Unsere erfolgreiche Hackathon-Organisation seit 2015",
+                "tag": "Hackathon",
                 "linkYoutube": "YouTube besuchen"
             },
             "deprecated": {
                 "name": "Already Deprecated Stream",
                 "desc": "Ein Tech-Stream mit einigen herausragenden Kollegen",
+                "tag": "Tech Stream",
                 "link": "Webseite besuchen"
             }
         },
@@ -117,7 +173,27 @@
     },
     "contact": {
         "title": "Kontaktiere mich ☎️",
-        "subtitle": "Wenn du ein Projekt besprechen oder dich über Technologien austauschen möchtest, kontaktiere mich gerne!"
+        "subtitle": "Wenn du ein Projekt besprechen oder dich über Technologien austauschen möchtest, kontaktiere mich gerne!",
+        "form": {
+            "title": "Schreib mir eine Nachricht",
+            "name": "Dein Name",
+            "namePlaceholder": "Max Mustermann",
+            "email": "Deine E-Mail",
+            "emailPlaceholder": "max@beispiel.de",
+            "subject": "Betreff",
+            "subjectPlaceholder": "Projektanfrage",
+            "message": "Nachricht",
+            "messagePlaceholder": "Erzähl mir von deinem Projekt...",
+            "send": "Nachricht senden",
+            "sending": "Wird gesendet...",
+            "errors": {
+                "nameRequired": "Name ist erforderlich",
+                "emailRequired": "E-Mail ist erforderlich",
+                "emailInvalid": "E-Mail ist ungültig",
+                "subjectRequired": "Betreff ist erforderlich",
+                "messageRequired": "Nachricht ist erforderlich"
+            }
+        }
     },
     "footer": {
         "madeWith": "Erstellt mit",
@@ -126,6 +202,7 @@
     "navigation": {
         "skills": "Fähigkeiten",
         "education": "Ausbildung",
+        "certifications": "Zertifizierungen",
         "experience": "Erfahrung",
         "projects": "Projekte",
         "contact": "Kontakt"
@@ -134,7 +211,8 @@
         "workExperience": "Berufserfahrung",
         "education": "Ausbildung",
         "certifications": "Zertifizierungen",
-        "projects": "Projekte"
+        "projects": "Projekte",
+        "contact": "Kontaktiere mich"
     },
     "buttons": {
         "seeResume": "Lebenslauf ansehen",

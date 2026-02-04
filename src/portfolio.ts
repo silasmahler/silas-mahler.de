@@ -1,10 +1,9 @@
-/* Change this file to get your personal Portfolio */
-
-// Summary And Greeting Section
+/* Portfolio Configuration - TypeScript Version */
 
 import emoji from "react-easy-emoji";
 import fhdoLogo from "./assets/images/fhdo-logo.png";
 import kreinnLogo from "./assets/images/kreinn.png";
+import trackinnLogo from "./assets/images/TrackInn-logo.svg";
 import capgeminiLogo from "./assets/images/capgemini.png";
 import appsAssociatesLogo from "./assets/images/appsassociates.png";
 import adessoLogo from "./assets/images/adesso.png";
@@ -12,11 +11,13 @@ import dohackLogo from "./assets/images/dohack.png";
 import adeprecatedLogo from "./assets/images/adeprecated.png";
 import profilePhoto from "./assets/images/profile.jpg";
 
-const illustration = {
+// Illustration Configuration
+export const illustration = {
   animated: true // set to false to use static SVG
 };
 
-const greeting = {
+// Greeting Section Configuration
+export const greeting = {
   username: "Silas Mahler",
   title: "Hi, I'm Silas Mahler",
   subTitle: emoji(
@@ -30,22 +31,19 @@ const greeting = {
   profileImage: profilePhoto
 };
 
-// Social Media Links
-
-const socialMediaLinks = {
+// Social Media Links Configuration
+export const socialMediaLinks = {
   github: "https://github.com/silasmahler",
   linkedin: "https://www.linkedin.com/in/silas-mahler-b1b8aa127/",
   gmail: "info@silas-mahler.de",
   gitlab: "https://gitlab.com/silasmahler",
   facebook: "https://www.facebook.com/silas.mahler",
   twitter: "https://twitter.com/SilasMahler",
-  // Instagram and Twitter are also supported in the links!
   display: true // Set true to display this section, defaults to false
 };
 
-// Skills Section
-
-const skillsSection = {
+// Skills Section Configuration
+export const skillsSection = {
   title: "What I do",
   subTitle: "Senior Cloud Architect",
   skills: [
@@ -59,10 +57,6 @@ const skillsSection = {
       "⚡ Expertise in cloud system architectures, Java-based microservices, and the Spring ecosystem and a focus on modular architectures"
     )
   ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
   softwareSkills: [
     {
       skillName: "AWS",
@@ -70,7 +64,7 @@ https://fontawesome.com/icons?d=gallery */
     },
     {
       skillName: "Terraform",
-      fontAwesomeClassname: "fas fa-code" // using code icon as generic for terraform if specific not avail
+      fontAwesomeClassname: "fas fa-code"
     },
     {
       skillName: "Docker",
@@ -108,9 +102,8 @@ https://fontawesome.com/icons?d=gallery */
   display: true // Set false to hide this section, defaults to true
 };
 
-// Education Section
-
-const educationInfo = {
+// Education Section Configuration
+export const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
@@ -132,9 +125,8 @@ const educationInfo = {
   ]
 };
 
-// Your top 3 proficient stacks/tech experience
-
-const techStack = {
+// Tech Stack Configuration
+export const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
@@ -154,12 +146,11 @@ const techStack = {
       progressPercentage: "85%"
     }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false // Set true to display codersrank badges section
 };
 
-// Work experience section
-
-const workExperiences = {
+// Work Experience Configuration
+export const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
@@ -195,9 +186,8 @@ const workExperiences = {
   ]
 };
 
-// Certifications Section
-
-const certifications = {
+// Certifications Configuration
+export const certifications = {
   display: true,
   certifications: [
     {
@@ -243,19 +233,16 @@ const certifications = {
   ]
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
-const openSource = {
+// Open Source Configuration
+export const openSource = {
   title: "Open Source Contributions",
   subtitle: "Aktive Beiträge zu verschiedenen Open-Source-Projekten. Weitere Projekte und Aktivitäten auf GitHub.",
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  showGithubProfile: "true", // Set true or false to show Contact profile using Github
   display: true // Set false to hide this section, defaults to true
 };
 
-// Some big projects you have worked on
-
-const bigProjects = {
+// Big Projects Configuration
+export const bigProjects = {
   title: "Big Projects",
   subtitle: "Organizations I helped build or contribute to",
   projects: [
@@ -270,7 +257,7 @@ const bigProjects = {
       ]
     },
     {
-      image: kreinnLogo,
+      image: trackinnLogo,
       projectKey: "trackinn",
       footerLink: [
         {
@@ -303,20 +290,18 @@ const bigProjects = {
   display: true // Set false to hide this section, defaults to true
 };
 
-// Podcast Section
-
-const podcastSection = {
+// Podcast Section Configuration
+export const podcastSection = {
   title: emoji("Podcast 🎙️"),
   subtitle: "Check out our Tech-Podcast! :)",
-
-  // Please Provide with Your Podcast embeded Link
   podcast: [
     "https://beacons.page/alreadydeprecated"
   ],
   display: true // Set false to hide this section, defaults to true
 };
 
-const contactInfo = {
+// Contact Information Configuration
+export const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "If you want to discuss a project or exchange ideas about technologies, feel free to contact me!",
@@ -324,25 +309,8 @@ const contactInfo = {
   email_address: "info@silas-mahler.de"
 };
 
-// Twitter Section
-
-const twitterDetails = {
+// Twitter Configuration
+export const twitterDetails = {
   userName: "silasmahler", //Replace "twitter" with your twitter username without @
   display: true // Set true to display this section, defaults to false
-};
-
-export {
-  illustration,
-  greeting,
-  socialMediaLinks,
-  skillsSection,
-  educationInfo,
-  techStack,
-  workExperiences,
-  openSource,
-  bigProjects,
-  podcastSection,
-  contactInfo,
-  twitterDetails,
-  certifications
 };
