@@ -114,43 +114,7 @@ const Certifications: React.FC<CertificationsProps> = ({ className = '' }) => {
             })}
           </motion.div>
 
-          {/* Stats Summary */}
-        <motion.div
-          className="mt-12 max-w-4xl mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={itemVariants}
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="card text-center">
-              <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
-                {certifications.certifications.length}
-              </div>
-              <div className="text-sm text-neutral-600 dark:text-neutral-400">
-                {t('certifications.totalCertifications', 'Total Certifications')}
-              </div>
-            </div>
-            
-            <div className="card text-center">
-              <div className="text-3xl font-bold text-accent-600 dark:text-accent-400 mb-2">
-                {new Date().getFullYear() - Math.min(...certifications.certifications.map((c: Certification) => parseInt(c.date)))}
-              </div>
-              <div className="text-sm text-neutral-600 dark:text-neutral-400">
-                {t('certifications.yearsOfLearning', 'Years of Learning')}
-              </div>
-            </div>
-            
-            <div className="card text-center">
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-                {certifications.certifications.filter((c: Certification) => parseInt(c.date) >= new Date().getFullYear() - 1).length}
-              </div>
-              <div className="text-sm text-neutral-600 dark:text-neutral-400">
-                {t('certifications.recentCertifications', 'Recent (Last Year)')}
-              </div>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

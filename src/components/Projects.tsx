@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo, useCallback, useRef, lazy, Suspense } from 'react';
-import { motion, AnimatePresence, useReducedMotion, useInView } from 'framer-motion';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
+import { motion, useReducedMotion, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { openSource, bigProjects, socialMediaLinks } from '../portfolio';
 import { animationPresets, getMotionVariants } from '../config/motion';
@@ -202,47 +202,56 @@ const Projects: React.FC<ProjectsProps> = ({ className = '' }) => {
               {t('projects.bigProjects.title')}
             </motion.h3>
 
-            {/* Projects Grid - Smaller */}
+            {/* Projects Grid - Bento Box Style */}
             <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={containerVariants}
             >
-              {bigProjects.projects.map((project: BigProject) => (
+              {bigProjects.projects.map((project: BigProject, index: number) => (
                 <motion.a
                   key={project.projectKey}
                   href={project.footerLink[0]?.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="card group text-center cursor-pointer"
+                  className={`card group cursor-pointer relative overflow-hidden flex flex-col justify-center
+                    ${index === 0 ? 'md:col-span-2 lg:col-span-2 lg:row-span-2 min-h-[300px]' : 
+                      index === 1 ? 'md:col-span-1 lg:col-span-1 lg:row-span-2 min-h-[300px]' : 
+                      'md:col-span-1 lg:col-span-1 min-h-[200px]'}`}
                   variants={itemVariants}
-                  whileHover={{ y: -4 }}
+                  whileHover={{ y: -4, scale: 1.02 }}
                 >
+                  {/* Subtle background glow on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-accent-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  
                   {/* Project Image */}
-                  <div className="relative h-32 mb-4 flex items-center justify-center">
+                  <div className={`relative flex items-center justify-center transition-transform duration-500 group-hover:scale-105 mb-4
+                    ${index <= 1 ? 'h-40 md:h-48' : 'h-24'}`}>
                     <LazyImage
                       src={project.image}
                       alt={t(`projects.bigProjects.${project.projectKey}.name`)}
-                      className="h-full w-full object-contain"
+                      className="h-full w-full object-contain filter drop-shadow-md"
                     />
                   </div>
 
-                  {/* Project Name */}
-                  <h4 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
-                    {t(`projects.bigProjects.${project.projectKey}.name`)}
-                  </h4>
+                  <div className="mt-auto text-center z-10">
+                    {/* Project Name */}
+                    <h4 className="text-sm md:text-base font-bold text-neutral-900 dark:text-neutral-100 mb-1">
+                      {t(`projects.bigProjects.${project.projectKey}.name`)}
+                    </h4>
 
-                  {/* Project Tag */}
-                  <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-3">
-                    {t(`projects.bigProjects.${project.projectKey}.tag`)}
-                  </p>
+                    {/* Project Tag */}
+                    <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">
+                      {t(`projects.bigProjects.${project.projectKey}.tag`)}
+                    </p>
 
-                  {/* External Link Icon */}
-                  <div className="inline-flex items-center gap-1 text-xs text-primary-600 dark:text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <i className="fas fa-external-link-alt" aria-hidden="true" />
-                    <span>{t(`projects.bigProjects.${project.projectKey}.${project.footerLink[0]?.nameKey}`)}</span>
+                    {/* External Link Icon */}
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-50 dark:bg-primary-900/30 text-xs font-medium text-primary-600 dark:text-primary-400 opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0">
+                      <span>{t(`projects.bigProjects.${project.projectKey}.${project.footerLink[0]?.nameKey}`)}</span>
+                      <i className="fas fa-arrow-right text-[10px]" aria-hidden="true" />
+                    </div>
                   </div>
                 </motion.a>
               ))}

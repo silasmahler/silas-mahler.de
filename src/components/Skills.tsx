@@ -1,11 +1,10 @@
 import React, { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, Transition, useInView, useReducedMotion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { skillsSection, techStack } from '../portfolio';
+import { skillsSection } from '../portfolio';
 import { SkillsProps, SkillCategory, Skill } from '../types';
 import { animationPresets, transitions, getMotionVariants } from '../config/motion';
 import { designSystemUtils } from '../utils/design-system';
-import skill from "../assets/images/skill.svg";
 
 // Helper function to ensure transitions are never undefined
 const safeTransition = (transition: Transition | undefined): Transition => 
@@ -499,52 +498,79 @@ const Skills: React.FC<SkillsProps> = ({
           </motion.p>
         </motion.div>
 
-        {/* Skills Grid - Clean 3-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Skills Grid - Responsive Layout for better scaling */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {categories.map((category, catIndex) => (
             <motion.div
               key={category.id}
-              className="card p-8"
+              className={`card p-6 md:p-8 flex flex-col ${
+                catIndex === 2 ? 'lg:col-span-2' : 'lg:col-span-1'
+              }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: catIndex * 0.1 }}
             >
               {/* Category Header */}
-              <div className="flex items-center gap-4 mb-6 pb-4 border-b border-neutral-200 dark:border-neutral-700">
-                <div className="w-12 h-12 rounded-lg bg-primary-500 dark:bg-primary-600 flex items-center justify-center text-white">
+              <div className="flex items-center gap-4 mb-6 pb-4 border-b border-neutral-200 dark:border-neutral-700 shrink-0">
+                <div className={`w-12 h-12 shrink-0 rounded-xl flex items-center justify-center text-white shadow-lg ${
+                  catIndex === 0 ? 'bg-gradient-to-br from-primary-500 to-primary-700' :
+                  catIndex === 1 ? 'bg-gradient-to-br from-secondary-500 to-secondary-700' :
+                  'bg-gradient-to-br from-accent-500 to-accent-700'
+                }`}>
                   <i className={`fas ${catIndex === 0 ? 'fa-cloud' : catIndex === 1 ? 'fa-code' : 'fa-sitemap'} text-xl`} aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
+                <h3 className="text-xl md:text-2xl font-bold text-neutral-900 dark:text-neutral-100">
                   {t(category.nameKey)}
                 </h3>
               </div>
 
-              {/* Skills List */}
-              <div className="space-y-4">
+              {/* Skills List - Dynamic Grid depending on parent span */}
+              <div className={`grid gap-4 md:gap-6 flex-grow ${
+                catIndex === 2 
+                  ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4' 
+                  : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2'
+              }`}>
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name} className="group">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-2">
-                        {skill.icon && (
-                          <i className={`${skill.icon} text-primary-600 dark:text-primary-400`} aria-hidden="true" />
-                        )}
-                        <span className="font-medium text-neutral-900 dark:text-neutral-100">
-                          {skill.name}
+                  <div key={skill.name} className="group p-4 rounded-xl bg-neutral-50/50 dark:bg-neutral-800/50 hover:bg-neutral-100 dark:hover:bg-neutral-700/50 transition-colors border border-transparent hover:border-neutral-200 dark:hover:border-neutral-700 flex flex-col justify-between h-full">
+                    <div>
+                      <div className="flex items-start justify-between mb-3 gap-2">
+                        <div className="flex items-center gap-3">
+                          {skill.icon && (
+                            <div className="w-8 h-8 shrink-0 rounded-lg bg-white dark:bg-neutral-900 shadow-sm flex items-center justify-center">
+                              <i className={`${skill.icon} text-lg text-primary-600 dark:text-primary-400`} aria-hidden="true" />
+                            </div>
+                          )}
+                          <span className="font-semibold text-neutral-900 dark:text-neutral-100 leading-tight">
+                            {skill.name}
+                          </span>
+                        </div>
+                        <span className="text-sm shrink-0 font-bold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/30 px-2 py-1 rounded">
+                          {skill.level}%
                         </span>
                       </div>
-                      <span className="text-sm font-semibold text-primary-600 dark:text-primary-400">
-                        {skill.level}%
-                      </span>
+                      {/* Compact description allowing multiple lines */}
+                      {skill.description && (
+                         <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4 whitespace-normal break-words">
+                           {skill.description}
+                         </p>
+                      )}
                     </div>
-                    <div className="h-2 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full bg-gradient-to-r from-primary-500 to-primary-600 dark:from-primary-600 dark:to-primary-500 rounded-full"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ delay: catIndex * 0.1 + skillIndex * 0.05, duration: 0.8 }}
-                      />
+                    {/* Progress Bar fixed to bottom */}
+                    <div className="mt-auto">
+                      <div className="h-1.5 bg-neutral-200 dark:bg-neutral-700 rounded-full overflow-hidden">
+                        <motion.div
+                          className={`h-full rounded-full ${
+                            skill.level >= 90 ? 'bg-gradient-to-r from-primary-500 to-accent-500' :
+                            skill.level >= 80 ? 'bg-gradient-to-r from-primary-400 to-primary-600' :
+                            'bg-primary-500'
+                          }`}
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          viewport={{ once: true }}
+                          transition={{ delay: catIndex * 0.1 + skillIndex * 0.05, duration: 0.8, ease: "easeOut" }}
+                        />
+                      </div>
                     </div>
                   </div>
                 ))}

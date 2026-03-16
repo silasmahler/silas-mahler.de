@@ -1,31 +1,12 @@
-
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { greeting, illustration, socialMediaLinks } from '../portfolio';
 import { FaGithub, FaLinkedin, FaGoogle, FaTwitter } from 'react-icons/fa';
 import { animationPresets, transitions } from '../config/motion';
 import undrawn2 from "../assets/images/undrawn2.svg";
 
-// TypeScript interfaces
-interface GreetingData {
-  username: string;
-  title: string;
-  subTitle: string;
-  resumeLink?: string;
-  displayGreeting: boolean;
-  profileImage?: string;
-}
-
-interface IllustrationData {
-  animated: boolean;
-}
-
-interface SocialLink {
-  platform: string;
-  url: string;
-  icon: React.ComponentType;
-}
+// No interfaces needed here anymore
 
 interface GreetingProps {
   className?: string;
@@ -137,13 +118,12 @@ const ProfileImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
       className="relative max-w-md mx-auto"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={transitions.slow}
+      transition={transitions.slow as any}
     >
 
       
       {/* Profile image container with clean border */}
-      <div className="relative overflow-hidden rounded-2xl aspect-square bg-white dark:bg-neutral-800 p-1.5 shadow-lg border-2 border-neutral-200 dark:border-neutral-700">
-        {!imageError ? (
+      <div className="relative overflow-hidden rounded-2xl aspect-square bg-white dark:bg-neutral-800 p-1.5 shadow-lg border-2 border-neutral-200 dark:border-neutral-700">        {!imageError ? (
           <>
             {/* Loading skeleton */}
             {!imageLoaded && (
@@ -199,30 +179,45 @@ const Greeting: React.FC<GreetingProps> = ({ className = '' }) => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      {/* Content Section */}
-      <div className="w-full lg:w-1/2 lg:pr-16 text-center lg:text-left space-y-6">
-        {/* Main Title */}
+      {/* Content Section - Centered and High Impact */}
+      <div className="w-full text-center space-y-8 z-10 relative">
+        
+        {/* Animated Subtitle (Now above title) */}
         <motion.div
           variants={animationPresets.hero.item}
-          className="space-y-3"
+          className="relative inline-block bg-primary-50 dark:bg-primary-900/30 px-4 py-2 rounded-full border border-primary-100 dark:border-primary-800"
+        >
+          <p className="text-sm sm:text-base text-primary-600 dark:text-primary-400 font-medium font-mono uppercase tracking-wider">
+            Cloud Architect & Open Source Enthusiast
+          </p>
+        </motion.div>
+
+        {/* Main Title - Massive */}
+        <motion.div
+          variants={animationPresets.hero.item}
+          className="space-y-4"
         >
           <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-neutral-900 dark:text-white"
+            className="text-5xl sm:text-6xl lg:text-8xl font-black leading-tight tracking-tighter text-neutral-900 dark:text-white"
           >
-            {t('greeting.title')}
+            {t('greeting.title').split(' ').map((word: string, i: number) => (
+              <span key={i} className="inline-block hover:text-primary-600 transition-colors cursor-default mr-3 lg:mr-5">
+                {word}
+              </span>
+            ))}
           </motion.h1>
         </motion.div>
 
-        {/* Animated Subtitle with Typing Effect */}
+        {/* Typed Introduction */}
         <motion.div
           variants={animationPresets.hero.item}
-          className="relative"
+          className="relative mx-auto max-w-3xl pt-6"
         >
-          <p className="text-lg sm:text-xl lg:text-2xl text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-2xl font-light">
+          <p className="text-lg sm:text-xl lg:text-2xl text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
             {typedSubtitle}
             {!isComplete && (
               <motion.span
-                className="inline-block w-0.5 h-5 bg-primary-500 ml-1 align-middle"
+                className="inline-block w-0.5 h-6 bg-primary-500 ml-1 align-middle"
                 animate={{ opacity: [1, 0, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
               />
@@ -230,30 +225,29 @@ const Greeting: React.FC<GreetingProps> = ({ className = '' }) => {
           </p>
         </motion.div>
 
-        {/* Social Media Links */}
+        {/* Social Media & Actions - Centered */}
         <motion.div
           variants={animationPresets.hero.item}
-          className="space-y-5"
+          className="pt-8 flex flex-col items-center gap-8"
         >
           <FloatingSocialLinks />
           
           {/* Resume Button */}
           {greeting.resumeLink && (
             <motion.div
-              className="pt-2"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <a
                 href={greeting.resumeLink}
-                className="btn-primary inline-flex items-center space-x-2 group"
+                className="btn-primary inline-flex items-center space-x-3 group px-8 py-4 text-lg rounded-full shadow-xl hover:shadow-2xl hover:shadow-primary-500/20"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span>{t('buttons.seeResume')}</span>
                 <motion.i
                   className="fas fa-arrow-right text-sm"
-                  animate={{ x: [0, 3, 0] }}
+                  animate={{ x: [0, 4, 0] }}
                   transition={{ 
                     duration: 1.5, 
                     repeat: Infinity, 
@@ -281,7 +275,7 @@ const Greeting: React.FC<GreetingProps> = ({ className = '' }) => {
             className="max-w-lg mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={transitions.slow}
+            transition={transitions.slow as any}
           >
             <motion.img 
               src={undrawn2} 
@@ -303,12 +297,12 @@ const Greeting: React.FC<GreetingProps> = ({ className = '' }) => {
             className="w-full h-auto max-w-lg mx-auto card p-12 flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={transitions.slow}
+            transition={transitions.slow as any}
           >
             <div className="text-center">
               <i className="fas fa-code text-8xl text-primary-600 dark:text-primary-400 mb-4" aria-hidden="true" />
               <p className="text-lg text-neutral-600 dark:text-neutral-400 font-medium">
-                {t('greeting.developer', 'Software Developer')}
+                Cloud Architect & Open Source Enthusiast
               </p>
             </div>
           </motion.div>
