@@ -221,7 +221,7 @@ const Projects: React.FC<ProjectsProps> = ({ className = '' }) => {
                   whileHover={{ y: -4 }}
                 >
                   {/* Project Image */}
-                  <div className="relative h-32 mb-4 flex items-center justify-center">
+                  <div className="relative h-32 mb-4 flex items-center justify-center rounded-lg bg-white dark:bg-white/95 p-4">
                     <LazyImage
                       src={project.image}
                       alt={t(`projects.bigProjects.${project.projectKey}.name`)}

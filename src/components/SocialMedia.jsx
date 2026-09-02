@@ -5,40 +5,42 @@ import { FaGithub, FaLinkedin, FaGoogle, FaGitlab, FaFacebook, FaTwitter, FaInst
 function SocialMedia() {
     if (!socialMediaLinks.display) return null;
 
+    const iconClass = "icon-button bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-primary-500 hover:text-white dark:hover:bg-primary-500 dark:hover:text-white";
+
     return (
-        <div className="flex space-x-5 mt-5">
+        <div className="flex space-x-4 mt-5">
             {socialMediaLinks.github && (
-                <a href={socialMediaLinks.github} className="icon-button bg-gray-800 hover:bg-gray-700 text-white" target="_blank" rel="noopener noreferrer">
+                <a href={socialMediaLinks.github} className={iconClass} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <FaGithub />
                 </a>
             )}
             {socialMediaLinks.linkedin && (
-                <a href={socialMediaLinks.linkedin} className="icon-button bg-[#0077B5] hover:bg-[#006396] text-white" target="_blank" rel="noopener noreferrer">
+                <a href={socialMediaLinks.linkedin} className={iconClass} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <FaLinkedin />
                 </a>
             )}
             {socialMediaLinks.gmail && (
-                <a href={`mailto:${socialMediaLinks.gmail}`} className="icon-button bg-[#D14836] hover:bg-[#B03C2D] text-white" target="_blank" rel="noopener noreferrer">
+                <a href={`mailto:${socialMediaLinks.gmail}`} className={iconClass} target="_blank" rel="noopener noreferrer" aria-label="Email">
                     <FaGoogle />
                 </a>
             )}
             {socialMediaLinks.gitlab && (
-                <a href={socialMediaLinks.gitlab} className="icon-button bg-[#FC6D26] hover:bg-[#E24329] text-white" target="_blank" rel="noopener noreferrer">
+                <a href={socialMediaLinks.gitlab} className={iconClass} target="_blank" rel="noopener noreferrer" aria-label="GitLab">
                     <FaGitlab />
                 </a>
             )}
             {socialMediaLinks.facebook && (
-                <a href={socialMediaLinks.facebook} className="icon-button bg-[#3b5998] hover:bg-[#2d4373] text-white" target="_blank" rel="noopener noreferrer">
+                <a href={socialMediaLinks.facebook} className={iconClass} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <FaFacebook />
                 </a>
             )}
             {socialMediaLinks.twitter && (
-                <a href={socialMediaLinks.twitter} className="icon-button bg-[#1DA1F2] hover:bg-[#0c85d0] text-white" target="_blank" rel="noopener noreferrer">
+                <a href={socialMediaLinks.twitter} className={iconClass} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                     <FaTwitter />
                 </a>
             )}
             {socialMediaLinks.instagram && (
-                <a href={socialMediaLinks.instagram} className="icon-button bg-[#E1306C] hover:bg-[#C13584] text-white" target="_blank" rel="noopener noreferrer">
+                <a href={socialMediaLinks.instagram} className={iconClass} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <FaInstagram />
                 </a>
             )}

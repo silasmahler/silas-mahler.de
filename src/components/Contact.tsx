@@ -1,10 +1,9 @@
 import React, { useState, useCallback } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { contactInfo, socialMediaLinks } from '../portfolio';
+import { contactInfo } from '../portfolio';
 import SocialMedia from './SocialMedia';
 import { animationPresets, getMotionVariants } from '../config/motion';
-import contactMail from '../assets/images/contactMail.webp';
 
 // TypeScript Interfaces
 interface ContactProps {
@@ -163,22 +162,6 @@ const Contact: React.FC<ContactProps> = ({ className = '' }) => {
               <i className="fas fa-envelope text-lg" aria-hidden="true" />
               {t('buttons.sayHello')}
             </motion.a>
-
-            {/* Contact Image */}
-            <motion.div
-              className="mt-12 hidden lg:block"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              <img
-                src={contactMail}
-                alt="Contact illustration"
-                className="w-full max-w-md rounded-2xl shadow-2xl"
-                loading="lazy"
-              />
-            </motion.div>
           </motion.div>
 
           {/* Right Side - Contact Form */}

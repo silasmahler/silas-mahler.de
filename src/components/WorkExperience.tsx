@@ -40,8 +40,10 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ experience, index, isExpand
       case 'capgemini':
         bullets.push(
           t(`workExperience.${experience.companyKey}.bullets.header`),
-          t(`workExperience.${experience.companyKey}.bullets.mercedes`),
-          t(`workExperience.${experience.companyKey}.bullets.aws`),
+          t(`workExperience.${experience.companyKey}.bullets.finops`),
+          t(`workExperience.${experience.companyKey}.bullets.adas`),
+          t(`workExperience.${experience.companyKey}.bullets.waf`),
+          t(`workExperience.${experience.companyKey}.bullets.sovereignCloud`),
           t(`workExperience.${experience.companyKey}.bullets.modernization`),
           t(`workExperience.${experience.companyKey}.bullets.iac`),
           t(`workExperience.${experience.companyKey}.bullets.security`),

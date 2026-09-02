@@ -48,12 +48,14 @@
             "desc": "Specializing in the specification and implementation of cloud-native solutions for software migrations and enterprise systems in AWS. Providing comprehensive consulting and advisory services.",
             "bullets": {
                 "header": "Key Client Engagements:",
-                "mercedes": "Mercedes-Benz Group AG (2025): AWS Cloud Architecture for ADAS platform cloud infrastructure modernization, processing massive amounts of sensor and driving data for autonomous driving (Levels 1-3)",
-                "aws": "Amazon AWS (2025): AWS Cloud architecture & AWS Well-Architected Tool",
+                "finops": "Global Automotive OEM (2025–2026): Led a FinOps & Cloud Cost Governance program — automated workload scheduling plus a Terraform-based policy and chargeback framework — cutting cloud spend by roughly €1.7M per year at full rollout",
+                "adas": "Global Automotive OEM (2024–2025): AWS cloud architecture for an ADAS platform's infrastructure modernization, processing large volumes of sensor and driving data for autonomous driving (Levels 1–3)",
+                "waf": "Autonomous-Driving Data Platform (2025): AWS Well-Architected Framework review across all six pillars for a serverless sensor-data platform, identifying high-risk items and defining remediation roadmaps",
+                "sovereignCloud": "Sovereign Defense Cloud Platform (2025–ongoing): Cloud Architect & Delivery Lead for a strategic platform program building a sovereign, mission-critical AWS cloud and data platform for Defense & Public Sector clients — multi-level data classification (UNCLASSIFIED to SECRET) with automated policy enforcement, NATO-aligned AI-assisted situational-picture generation, Zero-Trust access via IAM Identity Center, and full EU data sovereignty with no data leaving the region",
                 "modernization": "Cloud Infrastructure Modernization & Architecture Consulting",
                 "iac": "Infrastructure-as-Code (IaC) Development",
                 "security": "Security & Compliance Advisory",
-                "migration": "AWS to Google Cloud Migration",
+                "migration": "Led the cloud-architecture workstream for an AWS-to-Google-Cloud migration, including technical pre-sales support",
                 "coordination": "Cross-Team Coordination & Service-Oriented Cloud Enablement",
                 "devops": "DevOps & CI/CD Optimization"
             }
@@ -129,9 +131,9 @@
                 "tag": "IT Startup",
                 "link": "Visit Website"
             },
-            "trackinn": {
-                "name": "TrackInn",
-                "desc": "Modern time tracking for efficient project management",
+            "zeitmatrose": {
+                "name": "Zeitmatrose",
+                "desc": "Modern time tracking for craft and trade businesses",
                 "tag": "Time Tracking",
                 "link": "Visit Website"
             },
@@ -159,7 +161,7 @@
         "subtitle": "Check out our Tech-Podcast! :)"
     },
     "contact": {
-        "title": "Contact Me ☎️",
+        "title": "Contact Me",
         "subtitle": "If you want to discuss a project or exchange ideas about technologies, feel free to contact me!",
         "form": {
             "title": "Send me a message",

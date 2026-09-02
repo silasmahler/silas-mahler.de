@@ -3,7 +3,7 @@
 import emoji from "react-easy-emoji";
 import fhdoLogo from "./assets/images/fhdo-logo.png";
 import kreinnLogo from "./assets/images/kreinn.png";
-import trackinnLogo from "./assets/images/TrackInn-logo.svg";
+import zeitmatroseLogo from "./assets/images/zeitmatrose-logo.svg";
 import capgeminiLogo from "./assets/images/capgemini.png";
 import appsAssociatesLogo from "./assets/images/appsassociates.png";
 import adessoLogo from "./assets/images/adesso.png";
@@ -238,7 +238,7 @@ export const openSource = {
   title: "Open Source Contributions",
   subtitle: "Aktive Beiträge zu verschiedenen Open-Source-Projekten. Weitere Projekte und Aktivitäten auf GitHub.",
   showGithubProfile: "true", // Set true or false to show Contact profile using Github
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Big Projects Configuration
@@ -257,12 +257,12 @@ export const bigProjects = {
       ]
     },
     {
-      image: trackinnLogo,
-      projectKey: "trackinn",
+      image: zeitmatroseLogo,
+      projectKey: "zeitmatrose",
       footerLink: [
         {
           nameKey: "link",
-          url: "https://trackinn.de/"
+          url: "https://zeitmatrose.de/"
         }
       ]
     },

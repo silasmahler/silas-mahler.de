@@ -54,12 +54,14 @@
             "desc": "Spezialisiert auf die Spezifikation und Implementierung von cloud-nativen Lösungen für Software-Migrationen und Unternehmenssysteme in AWS. Umfassende Beratungs- und Advisory-Dienstleistungen.",
             "bullets": {
                 "header": "Wichtige Kundenprojekte:",
-                "mercedes": "Mercedes-Benz Group AG (2025): AWS Cloud-Architektur für ADAS-Plattform Cloud-Infrastruktur-Modernisierung, Verarbeitung massiver Mengen an Sensor- und Fahrdaten für autonomes Fahren (Level 1-3)",
-                "aws": "Amazon AWS (2025): AWS Cloud-Architektur & AWS Well-Architected Tool",
+                "finops": "Globaler Automobilhersteller (2025–2026): Leitung eines FinOps- & Cloud-Cost-Governance-Programms – automatisierte Workload-Steuerung sowie ein Terraform-basiertes Policy- und Chargeback-Framework – wodurch die Cloud-Kosten bei vollem Rollout um rund 1,7 Mio. € pro Jahr gesenkt wurden",
+                "adas": "Globaler Automobilhersteller (2024–2025): AWS-Cloud-Architektur für die Infrastruktur-Modernisierung einer ADAS-Plattform, Verarbeitung großer Mengen an Sensor- und Fahrdaten für autonomes Fahren (Level 1–3)",
+                "waf": "Plattform für autonomes Fahren (2025): AWS Well-Architected Framework Review über alle sechs Säulen für eine serverlose Sensordaten-Plattform, Identifikation von High-Risk-Items und Entwicklung von Behebungs-Roadmaps",
+                "sovereignCloud": "Souveräne Defense-Cloud-Plattform (2025–laufend): Cloud Architect & Delivery Lead für ein strategisches Plattformprogramm zum Aufbau einer souveränen, missionskritischen AWS-Cloud- und Datenplattform für Defense- und Public-Sector-Kunden – mehrstufige Datenklassifizierung (UNCLASSIFIED bis SECRET) mit automatisierter Policy-Enforcement, NATO-konforme KI-gestützte Lagebilderstellung, Zero-Trust-Zugriff über IAM Identity Center und vollständige EU-Datensouveränität ohne Datenausfuhr",
                 "modernization": "Cloud-Infrastruktur-Modernisierung & Architektur-Beratung",
                 "iac": "Infrastructure-as-Code (IaC) Entwicklung",
                 "security": "Sicherheits- & Compliance-Beratung",
-                "migration": "AWS zu Google Cloud Migration",
+                "migration": "Leitung des Cloud-Architektur-Workstreams für eine AWS-zu-Google-Cloud-Migration, inklusive technischem Pre-Sales-Support",
                 "coordination": "Team-übergreifende Koordination & Service-orientierte Cloud-Enablement",
                 "devops": "DevOps & CI/CD Optimierung"
             }
@@ -142,9 +144,9 @@
                 "tag": "IT Startup",
                 "link": "Webseite besuchen"
             },
-            "trackinn": {
-                "name": "TrackInn",
-                "desc": "Moderne Zeiterfassung für effizientes Projektmanagement",
+            "zeitmatrose": {
+                "name": "Zeitmatrose",
+                "desc": "Moderne Zeiterfassung für Handwerksbetriebe",
                 "tag": "Zeiterfassung",
                 "link": "Webseite besuchen"
             },
@@ -172,7 +174,7 @@
         "subtitle": "Schau dir unseren Tech-Podcast an! :)"
     },
     "contact": {
-        "title": "Kontaktiere mich ☎️",
+        "title": "Kontaktiere mich",
         "subtitle": "Wenn du ein Projekt besprechen oder dich über Technologien austauschen möchtest, kontaktiere mich gerne!",
         "form": {
             "title": "Schreib mir eine Nachricht",

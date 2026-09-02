@@ -63,31 +63,33 @@ const useTypingAnimation = (text: string, speed: number = 50) => {
 const FloatingSocialLinks: React.FC = () => {
   if (!socialMediaLinks.display) return null;
 
+  const iconColor = 'bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-primary-500 hover:text-white dark:hover:bg-primary-500 dark:hover:text-white';
+
   const socialPlatforms = [
-    { 
-      key: 'github', 
-      url: socialMediaLinks.github, 
-      icon: FaGithub, 
-      color: 'bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600' 
+    {
+      key: 'github',
+      url: socialMediaLinks.github,
+      icon: FaGithub,
+      color: iconColor
     },
-    { 
-      key: 'linkedin', 
-      url: socialMediaLinks.linkedin, 
-      icon: FaLinkedin, 
-      color: 'bg-[#0077B5] hover:bg-[#006396] dark:bg-[#0077B5] dark:hover:bg-[#006396]' 
+    {
+      key: 'linkedin',
+      url: socialMediaLinks.linkedin,
+      icon: FaLinkedin,
+      color: iconColor
     },
-    { 
-      key: 'gmail', 
-      url: socialMediaLinks.gmail, 
-      icon: FaGoogle, 
-      color: 'bg-[#D14836] hover:bg-[#B03C2D] dark:bg-[#D14836] dark:hover:bg-[#B03C2D]', 
-      isEmail: true 
+    {
+      key: 'gmail',
+      url: socialMediaLinks.gmail,
+      icon: FaGoogle,
+      color: iconColor,
+      isEmail: true
     },
-    { 
-      key: 'twitter', 
-      url: socialMediaLinks.twitter, 
-      icon: FaTwitter, 
-      color: 'bg-[#1DA1F2] hover:bg-[#0c85d0] dark:bg-[#1DA1F2] dark:hover:bg-[#0c85d0]' 
+    {
+      key: 'twitter',
+      url: socialMediaLinks.twitter,
+      icon: FaTwitter,
+      color: iconColor
     },
   ].filter(platform => platform.url);
 
@@ -107,7 +109,7 @@ const FloatingSocialLinks: React.FC = () => {
             target={platform.isEmail ? undefined : "_blank"}
             rel={platform.isEmail ? undefined : "noopener noreferrer"}
             className={`
-              icon-button ${platform.color} text-white
+              icon-button ${platform.color}
               transition-all duration-200 transform hover:scale-105
               focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
               dark:focus:ring-offset-neutral-900 shadow-sm hover:shadow-md
