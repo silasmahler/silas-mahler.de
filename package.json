@@ -27,7 +27,9 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "format": "prettier --write \"./**/*.{js,jsx,css,json}\""
+    "format": "prettier --write \"./**/*.{js,jsx,css,json}\"",
+    "test": "vitest run",
+    "lint": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": "react-app"

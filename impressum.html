@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum | Silas Mahler</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (!t && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.classList.add("dark");
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <header class="border-b border-line">
+      <div class="wrap flex h-16 items-center justify-between">
+        <a href="./" class="text-[17px] font-semibold tracking-tight">Silas Mahler</a>
+        <a href="./" class="text-[15px] link">Zur Startseite</a>
+      </div>
+    </header>
+    <main class="wrap max-w-3xl py-16 sm:py-24 prose-legal">
+      <h1>Impressum</h1>
+      <h2>Angaben gemäß § 5 DDG</h2>
+      <p>Silas Mahler<br /><span class="todo">TODO: Straße und Hausnummer, PLZ Ort</span></p>
+      <h2>Kontakt</h2>
+      <p>E-Mail: <a href="mailto:info@silas-mahler.de">info@silas-mahler.de</a><br />Telefon: <span class="todo">TODO: optional</span></p>
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>Silas Mahler, Anschrift wie oben</p>
+      <h2>Hinweis</h2>
+      <p>Dies ist die private Website von Silas Mahler. Angaben zur KreInn GmbH stehen im Impressum auf <a href="https://kreinn.de/">kreinn.de</a>.</p>
+    </main>
+    <footer class="border-t border-line">
+      <div class="wrap flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
+        <p class="meta">© Silas Mahler</p>
+        <nav aria-label="Rechtliches" class="flex gap-6 text-[15px]">
+          <a href="./impressum.html" class="link">Impressum</a>
+          <a href="./datenschutz.html" class="link">Datenschutz</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
