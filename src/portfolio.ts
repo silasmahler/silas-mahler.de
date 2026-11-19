@@ -7,7 +7,9 @@ import adeprecatedLogo from "./assets/images/adeprecated-cropped.png";
 import profilePhoto from "./assets/images/profile.jpg";
 
 export const name = "Silas Mahler";
-export const email = "info@silas-mahler.de";
+// Contact runs via KreInn GmbH (same as the imprint on kreinn.de/legal-notice)
+export const email = "info@kreinn.de";
+export const phone = "0231-6186842";
 export const photo = profilePhoto;
 
 export const socialLinks = [

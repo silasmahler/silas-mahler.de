@@ -15,8 +15,12 @@ describe("site", () => {
       "./datenschutz.html"
     );
     expect(
-      screen.getByRole("link", {name: /info@silas-mahler\.de/})
-    ).toHaveAttribute("href", "mailto:info@silas-mahler.de");
+      screen.getByRole("link", {name: /info@kreinn\.de/})
+    ).toHaveAttribute("href", "mailto:info@kreinn.de");
+    expect(screen.getByRole("link", {name: /0231-6186842/})).toHaveAttribute(
+      "href",
+      "tel:+492316186842"
+    );
     const hrefs = screen.getAllByRole("link").map(a => a.getAttribute("href"));
     expect(hrefs).toEqual(
       expect.arrayContaining(["https://kreinn.de/", "https://zeitmatrose.de/"])
@@ -26,8 +30,9 @@ describe("site", () => {
   it("legal pages name the operator and a contact", () => {
     for (const f of ["impressum.html", "datenschutz.html"]) {
       const html = readFileSync(f, "utf8");
-      expect(html).toContain("Silas Mahler");
-      expect(html).toContain("mailto:info@silas-mahler.de");
+      expect(html).toContain("KreInn GmbH");
+      expect(html).toContain("Rumpstraße 15");
+      expect(html).toContain("mailto:info@kreinn.de");
     }
   });
 });

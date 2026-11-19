@@ -1,11 +1,19 @@
 import {useEffect, useState, type FormEvent, type ReactNode} from "react";
 import {useTranslation} from "react-i18next";
-import {LuArrowUpRight, LuMail, LuMenu, LuMoon, LuSun} from "react-icons/lu";
+import {
+  LuArrowUpRight,
+  LuMail,
+  LuMenu,
+  LuMoon,
+  LuPhone,
+  LuSun
+} from "react-icons/lu";
 import "./i18n";
 import {
   certifications,
   education,
   email,
+  phone,
   experience,
   name,
   photo,
@@ -446,6 +454,17 @@ function Contact() {
               className="shrink-0 text-mute"
             />
             {email}
+          </a>
+          <a
+            href={`tel:+49${phone.replace(/^0|\D/g, "")}`}
+            className="mt-3 flex items-center gap-3 text-xl font-medium sm:text-2xl link"
+          >
+            <LuPhone
+              size={20}
+              strokeWidth={1.5}
+              className="shrink-0 text-mute"
+            />
+            {phone}
           </a>
           <h3 className="mt-10 text-[15px] font-medium">
             {t("site.contact.elsewhere")}
