@@ -67,7 +67,7 @@ function Header() {
     "inline-flex h-9 min-w-9 items-center justify-center rounded-md px-2 text-ink2 transition-colors duration-150 ease-out hover:bg-raised hover:text-ink";
 
   return (
-    <header className="sticky top-0 z-20 border-b border-line bg-bg/90 backdrop-blur supports-[backdrop-filter]:bg-bg/75">
+    <header className="sticky top-0 z-20 border-b border-line bg-bg/90 backdrop-blur-sm supports-[backdrop-filter]:bg-bg/75">
       <div className="wrap flex h-16 items-center justify-between gap-4">
         <a href="#top" className="text-[17px] font-semibold tracking-tight">
           {name}
@@ -158,10 +158,10 @@ function Hero() {
       className="wrap grid items-center gap-12 py-12 sm:py-20 lg:min-h-[calc(100svh-4rem)] lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:py-16"
     >
       <div>
-        <h1 className="text-[40px] font-medium leading-[1.06] tracking-[-0.02em] sm:text-6xl sm:tracking-[-0.03em]">
+        <h1 className="text-[40px] font-medium leading-[1.06] tracking-[-0.02em] sm:text-6xl sm:leading-none sm:tracking-[-0.03em]">
           {t("site.hero.title")}
         </h1>
-        <p className="mt-6 max-w-xl text-lg leading-8 text-ink2 sm:text-xl">
+        <p className="mt-6 max-w-xl text-lg leading-8 text-ink2 sm:text-xl sm:leading-7">
           {t("site.hero.sub")}
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
@@ -264,7 +264,7 @@ function Experience() {
               {t(`workExperience.${e.key}.desc`)}
             </p>
             <details className="group mt-4 max-w-2xl">
-              <summary className="inline-flex cursor-pointer list-none items-center gap-1 rounded text-[15px] font-medium text-accent [&::-webkit-details-marker]:hidden">
+              <summary className="inline-flex cursor-pointer list-none items-center gap-1 rounded-sm text-[15px] font-medium text-accent [&::-webkit-details-marker]:hidden">
                 <span className="group-open:hidden">
                   {t("workExperience.showMore")}
                 </span>

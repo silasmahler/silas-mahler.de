@@ -1,56 +1,26 @@
 import {defineConfig} from "vite";
 import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 import {resolve} from "path";
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tailwindcss()],
+  base: "./",
   build: {
     outDir: "dist",
     sourcemap: process.env.NODE_ENV !== "production",
-    minify: "esbuild", // Use esbuild instead of terser (faster and no extra dependency)
-    rollupOptions: {
+    rolldownOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        impressum: resolve(__dirname, "impressum.html"),
-        datenschutz: resolve(__dirname, "datenschutz.html")
+        main: resolve(import.meta.dirname, "index.html"),
+        impressum: resolve(import.meta.dirname, "impressum.html"),
+        datenschutz: resolve(import.meta.dirname, "datenschutz.html")
       },
       output: {
-        manualChunks: {
-          // Code splitting for better performance
-          vendor: ["react", "react-dom"],
-          i18n: ["i18next", "react-i18next", "i18next-browser-languagedetector"]
-        },
-        // Optimize chunk file names
         chunkFileNames: "assets/[name]-[hash].js",
         entryFileNames: "assets/[name]-[hash].js",
         assetFileNames: "assets/[name]-[hash].[ext]"
       }
-    },
-    // Increase chunk size warning limit
-    chunkSizeWarningLimit: 1000,
-    // Enable CSS code splitting
-    cssCodeSplit: true
-  },
-  base: "./",
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "./src"),
-      "@/components": resolve(__dirname, "./src/components"),
-      "@/assets": resolve(__dirname, "./src/assets"),
-      "@/types": resolve(__dirname, "./src/types"),
-      "@/utils": resolve(__dirname, "./src/utils"),
-      "@/config": resolve(__dirname, "./src/config"),
-      "@/contexts": resolve(__dirname, "./src/contexts")
-    }
-  },
-  optimizeDeps: {
-    include: ["react", "react-dom", "i18next", "react-i18next"]
-  },
-  // Performance optimizations
-  server: {
-    hmr: {
-      overlay: true
     }
   }
 });
