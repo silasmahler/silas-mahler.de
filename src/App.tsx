@@ -347,11 +347,11 @@ function Projects() {
               rel="noopener noreferrer"
               className="group flex h-full flex-col rounded-2xl border border-line bg-card p-6 transition-colors duration-150 ease-out hover:border-ink/25"
             >
-              <span className="flex h-14 items-center self-start rounded-xl border border-line bg-white px-3">
+              <span className="flex h-14 items-center self-start rounded-xl border border-line bg-white p-1.5">
                 <img
                   src={pr.logo}
                   alt=""
-                  className="h-8 w-auto max-w-[160px] object-contain"
+                  className={`${pr.logoClass} w-auto max-w-[200px] object-contain`}
                   loading="lazy"
                 />
               </span>

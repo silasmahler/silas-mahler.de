@@ -1,9 +1,9 @@
 /* Site content. Text lives in src/locales, facts and links live here. */
 
-import kreinnLogo from "./assets/images/kreinn.png";
-import zeitmatroseLogo from "./assets/images/zeitmatrose-logo.svg";
+import kreinnLogo from "./assets/images/kreinn-cropped.png";
+import zeitmatroseLogo from "./assets/images/zeitmatrose-logo-light.svg";
 import dohackLogo from "./assets/images/dohack.png";
-import adeprecatedLogo from "./assets/images/adeprecated.png";
+import adeprecatedLogo from "./assets/images/adeprecated-cropped.png";
 import profilePhoto from "./assets/images/profile.jpg";
 
 export const name = "Silas Mahler";
@@ -125,22 +125,31 @@ export const certifications = [
 ];
 
 export const projects = [
-  {key: "kreinn", logo: kreinnLogo, url: "https://kreinn.de/", linkKey: "link"},
+  {
+    key: "kreinn",
+    logo: kreinnLogo,
+    logoClass: "mx-2 h-8",
+    url: "https://kreinn.de/",
+    linkKey: "link"
+  },
   {
     key: "zeitmatrose",
     logo: zeitmatroseLogo,
+    logoClass: "mx-2 h-8",
     url: "https://zeitmatrose.de/",
     linkKey: "link"
   },
   {
     key: "dohack",
     logo: dohackLogo,
+    logoClass: "h-full",
     url: "https://www.youtube.com/@dohack6855",
     linkKey: "linkYoutube"
   },
   {
     key: "deprecated",
     logo: adeprecatedLogo,
+    logoClass: "h-full rounded-lg",
     url: "https://beacons.page/alreadydeprecated",
     linkKey: "link"
   }
