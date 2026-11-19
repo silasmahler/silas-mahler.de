@@ -1,7 +1,6 @@
 /* Site content. Text lives in src/locales, facts and links live here. */
 
 import kreinnLogo from "./assets/images/kreinn-cropped.png";
-import zeitmatroseLogo from "./assets/images/zeitmatrose-logo-light.svg";
 import dohackLogo from "./assets/images/dohack.png";
 import adeprecatedLogo from "./assets/images/adeprecated-cropped.png";
 import profilePhoto from "./assets/images/profile.jpg";
@@ -136,7 +135,8 @@ export const projects = [
   },
   {
     key: "zeitmatrose",
-    logo: zeitmatroseLogo,
+    // exact file supplied by Silas (live header logo of zeitmatrose.de)
+    logo: "/zeitmatrose-logo.png",
     logoClass: "mx-2 h-8",
     url: "https://zeitmatrose.de/",
     linkKey: "link"
