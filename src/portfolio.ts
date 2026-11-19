@@ -135,8 +135,8 @@ export const projects = [
   },
   {
     key: "zeitmatrose",
-    // exact file supplied by Silas (live header logo of zeitmatrose.de)
-    logo: "/zeitmatrose-logo.png",
+    // identical to https://www.zeitmatrose.de/logo_light.svg (live header)
+    logo: "/zeitmatrose-logo-header.svg",
     logoClass: "mx-2 h-8",
     url: "https://zeitmatrose.de/",
     linkKey: "link"
