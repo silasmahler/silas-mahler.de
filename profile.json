@@ -1,50 +1,50 @@
 {
-    "data": {
-        "user": {
-            "name": "Silas Mahler",
-            "bio": "DevOps | Backend | Startup",
-            "isHireable": true,
-            "avatarUrl": "https://avatars.githubusercontent.com/u/123456?v=4",
-            "location": "Germany",
-            "pinnedItems": {
-                "totalCount": 6,
-                "edges": [
-                    {
-                        "node": {
-                            "name": "developerFolio",
-                            "description": "A modern developer portfolio built with React and Tailwind CSS",
-                            "forkCount": 10,
-                            "stargazers": {
-                                "totalCount": 50
-                            },
-                            "url": "https://github.com/silasmahler/developerFolio",
-                            "id": "R_kgDOH...",
-                            "diskUsage": 1000,
-                            "primaryLanguage": {
-                                "name": "JavaScript",
-                                "color": "#f1e05a"
-                            }
-                        }
-                    },
-                    {
-                        "node": {
-                            "name": "awesome-project",
-                            "description": "Another cool project",
-                            "forkCount": 5,
-                            "stargazers": {
-                                "totalCount": 20
-                            },
-                            "url": "https://github.com/silasmahler/awesome-project",
-                            "id": "R_kgDOH...2",
-                            "diskUsage": 500,
-                            "primaryLanguage": {
-                                "name": "Python",
-                                "color": "#3572A5"
-                            }
-                        }
-                    }
-                ]
+  "data": {
+    "user": {
+      "name": "Silas Mahler",
+      "bio": "DevOps | Backend | Startup",
+      "isHireable": true,
+      "avatarUrl": "https://avatars.githubusercontent.com/u/123456?v=4",
+      "location": "Germany",
+      "pinnedItems": {
+        "totalCount": 6,
+        "edges": [
+          {
+            "node": {
+              "name": "developerFolio",
+              "description": "A modern developer portfolio built with React and Tailwind CSS",
+              "forkCount": 10,
+              "stargazers": {
+                "totalCount": 50
+              },
+              "url": "https://github.com/silasmahler/developerFolio",
+              "id": "R_kgDOH...",
+              "diskUsage": 1000,
+              "primaryLanguage": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              }
             }
-        }
+          },
+          {
+            "node": {
+              "name": "awesome-project",
+              "description": "Another cool project",
+              "forkCount": 5,
+              "stargazers": {
+                "totalCount": 20
+              },
+              "url": "https://github.com/silasmahler/awesome-project",
+              "id": "R_kgDOH...2",
+              "diskUsage": 500,
+              "primaryLanguage": {
+                "name": "Python",
+                "color": "#3572A5"
+              }
+            }
+          }
+        ]
+      }
     }
+  }
 }
