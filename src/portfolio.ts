@@ -44,6 +44,8 @@ export const experience = [
     from: "2024",
     to: null,
     bullets: [
+      "sovereignAccelerator",
+      "agenticLandingZone",
       "finops",
       "adas",
       "waf",
