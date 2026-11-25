@@ -48,6 +48,7 @@ export const experience = [
       "adas",
       "waf",
       "sovereignCloud",
+      "landingZone",
       "modernization",
       "iac",
       "security",
